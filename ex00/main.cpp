@@ -10,7 +10,6 @@ int main()
 	WrongAnimal *wrong = new WrongAnimal("wrong");
 	Dog *dog = new Dog();
 	Cat *cat = new Cat();
-
 	std::cout << dog->getType() << std::endl;
 	std::cout << cat->getType() << std::endl;
 	std::cout << wrong->getType() << std::endl;

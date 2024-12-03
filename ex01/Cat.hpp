@@ -11,6 +11,7 @@ class Cat : public Animal
 		Cat(Cat const &src);
 		Cat &operator= (Cat const &src);
 		void makeSound();
+		Brain *getBrain();
 	private:
 		std::string type;
 		Brain *brain;

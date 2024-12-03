@@ -1,28 +1,35 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
 #include <iostream>
 
 int main()
 {
-	Animal *bird = new Animal("bird");
-	WrongAnimal *wrong = new WrongAnimal("wrong");
 	Dog *dog = new Dog();
+	Dog dog1(*dog);
 	Cat *cat = new Cat();
-
-	std::cout << dog->getType() << std::endl;
-	std::cout << cat->getType() << std::endl;
-	std::cout << wrong->getType() << std::endl;
-	std::cout << bird->getType() << std::endl;
-
-	bird->makeSound();
-	dog->makeSound();
-	cat->makeSound();
-	wrong->makeSound();
-
-	delete bird;
-	delete wrong;
+	Cat cat1 = *cat;
+	std::cout << "<= SHALLOW OR DEEP COPY TEST =>" << std::endl;
+	std::cout << "Dog's address " << dog->getBrain() << std::endl;
+	std::cout << "Dog1's address " << dog1.getBrain() << std::endl;
+	std::cout << "Cat's address " << cat->getBrain() << std::endl;
+	std::cout << "Cat1's address " << cat1.getBrain() << std::endl;
 	delete dog;
 	delete cat;
+
+	Animal *animals[100];
+
+	for(int i=0;i<100;i++)
+	{
+		if (i % 2 == 0)
+			animals[i] = new Dog();
+		else
+			animals[i] = new Cat();
+	}
+
+	animals[99]->makeSound();
+	animals[0]->makeSound();
+
+	for (int j=0;j<100;j++)
+		delete animals[j];
 }

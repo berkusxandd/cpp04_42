@@ -19,8 +19,8 @@ Animal::~Animal()
 }
 Animal::Animal(Animal const &src)
 {
-	std::cout << "Animal COPY constructor called, type: " << this->type << std::endl;
 	*this = src;
+	std::cout << "Animal COPY constructor called, type: " << this->type << std::endl;
 }
 
 Animal &Animal::operator=(Animal const &src)

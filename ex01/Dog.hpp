@@ -11,10 +11,10 @@ class Dog : public Animal
 		Dog(Dog const &src);
 		Dog &operator= (Dog const &src);
 		void makeSound();
+		Brain *getBrain();
 	private:
 		std::string type;
 		Brain *brain;
-
 };
 
 #endif
