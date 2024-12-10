@@ -1,5 +1,5 @@
-NAME = ex02
-SRCS = main.cpp AAnimal.cpp Dog.cpp Cat.cpp Brain.cpp
+NAME = ex03
+SRCS = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 OBJS = $(SRCS:.cpp=.o)
 OBJDIR = ./objs
 OBJ_PATHS = $(addprefix $(OBJDIR)/, $(OBJS))
