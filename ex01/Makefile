@@ -1,4 +1,4 @@
-NAME = ex02
+NAME = ex01
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJS = $(SRCS:.cpp=.o)
 OBJDIR = ./objs

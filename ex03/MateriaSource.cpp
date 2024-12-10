@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bince < bince@student.42.fr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/10 19:54:45 by bince             #+#    #+#             */
+/*   Updated: 2024/12/10 19:54:46 by bince            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "MateriaSource.hpp"
 
 MateriaSource::MateriaSource() : _count(0)
@@ -27,7 +39,7 @@ MateriaSource& MateriaSource:: operator=(const MateriaSource &src)
 
 MateriaSource::~MateriaSource()
 {
-    for (int i = 0; i < 4; ++i) 
+    for (int i = 0; i < 4; ++i)
     {
         if (this->_materias[i])
             delete this->_materias[i];

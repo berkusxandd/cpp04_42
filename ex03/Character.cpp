@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bince < bince@student.42.fr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/10 19:54:28 by bince             #+#    #+#             */
+/*   Updated: 2024/12/10 19:54:29 by bince            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Character.hpp"
 
 #include <iostream>
@@ -43,7 +55,7 @@ Character & Character::operator=(Character const &src)
 
 Character::~Character()
 {
-    std::cout << "new character destroyed" << std::endl;
+    std::cout << "character destroyed" << std::endl;
     for (int i = 0; i < 4; i++)
         delete this->_inventory[i];
 }

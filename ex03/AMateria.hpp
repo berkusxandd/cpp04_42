@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bince < bince@student.42.fr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/10 19:54:26 by bince             #+#    #+#             */
+/*   Updated: 2024/12/10 19:54:27 by bince            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef AMATERIA_HPP
 #define AMATERIA_HPP
 
@@ -18,6 +30,6 @@ class AMateria
         virtual AMateria *clone() const = 0;
         virtual void use(ICharacter &target);
 
-};    
+};
 
 #endif
