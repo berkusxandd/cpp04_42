@@ -14,26 +14,28 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 
 int main()
 {
 	Animal *bird = new Animal("bird");
-	WrongAnimal *wrong = new WrongAnimal("wrong");
-	Dog *dog = new Dog();
 	Cat *cat = new Cat();
+	Dog *dog = new Dog();
+	WrongCat *wrongCat = new WrongCat();
 	std::cout << dog->getType() << std::endl;
 	std::cout << cat->getType() << std::endl;
-	std::cout << wrong->getType() << std::endl;
 	std::cout << bird->getType() << std::endl;
+	std::cout << wrongCat->getType() << std::endl;
+
 
 	bird->makeSound();
 	dog->makeSound();
 	cat->makeSound();
-	wrong->makeSound();
+	wrongCat->makeSound();
 
 	delete bird;
-	delete wrong;
+	delete wrongCat;
 	delete dog;
 	delete cat;
 }

@@ -47,7 +47,7 @@ WrongAnimal &WrongAnimal::operator=(WrongAnimal const &src)
 
 void WrongAnimal::makeSound()
 {
-	std::cout << "*unknown animal noises*" << std::endl;
+	std::cout << "*wrong animal noises*" << std::endl;
 }
 
 std::string WrongAnimal::getType() const

@@ -13,16 +13,15 @@
 #ifndef WRONGCAT_HPP
 #define WRONGCAT_HPP
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class WrongCat : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
 		WrongCat();
 		~WrongCat();
 		WrongCat(WrongCat const &src);
 		WrongCat &operator= (WrongCat const &src);
-		void makeSound();
 	private:
 		std::string type;
 

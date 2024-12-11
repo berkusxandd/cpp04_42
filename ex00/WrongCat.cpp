@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
-
+#include "WrongAnimal.hpp"
 #include <iostream>
 
-WrongCat::WrongCat() : Animal("Cat")
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
 	this->type = "Cat";
 }
@@ -23,7 +23,7 @@ WrongCat::~WrongCat()
 {
 }
 
-WrongCat::WrongCat(WrongCat const &src) : Animal(src)
+WrongCat::WrongCat(WrongCat const &src) : WrongAnimal(src)
 {
 	*this = src;
 }
@@ -37,8 +37,4 @@ WrongCat &WrongCat::operator=(WrongCat const &src)
 	return (*this);
 }
 
-void WrongCat::makeSound()
-{
-	std::cout << "pspsps" << std::endl;
-}
 
